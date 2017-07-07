@@ -5,6 +5,10 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=10.0, user-scalable=1" />
         <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/blog.css" />
         <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/syntax.css" />
+
+                <link rel="stylesheet" href="/css/codemirror-default-theme.css">
+        <link rel="stylesheet" type="text/css" href="/css/eve-mode.css">
+
         <link rel="icon" type="image/png" href="/blog/images/icon.png">
         <link rel="alternate" type="application/atom+xml" title="Eve Programming Language" href="/atom.xml" />
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
@@ -33,23 +37,26 @@
 
 
         <main class="main layer-wrapper">
-	        <div class="toplayer">
+                <div class="toplayer">
 
                 <div class="drawer">
                     <div class="wrapper">
                         <a href="{{ site.url }}/archive/">Archive</a>
                     </div>
                 </div>
-            
+
 
                 <article class="article">
-			        <div class="wrapper">
+                                <div class="wrapper">
                         {{ content }}
-			        </div>
+                                </div>
                 </article>
             </div>
         </main>
-
+        <script src="/js/highlighter-bundle.js"></script>
+        <script>
+          window["eve-highlighter"].highlightAll();
+        </script>
             <script>
                   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
